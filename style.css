@@ -17,4 +17,13 @@
         color: rgb(255, 1, 1);
      }
 
+     .btn-success {
+        background-color: rgb(108, 186, 97);
+        border-color: rgb(108, 186, 97);
+        }
+
+        .btn-primary {
+            background-color: rgb(84, 140, 102);
+            border-color: rgb(84, 140, 102) ;
+        }
   
