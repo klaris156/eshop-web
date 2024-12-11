@@ -14,7 +14,7 @@
      }
 
      small {
-        color: rgb(255, 1, 1);
+        color: rgb(223, 115, 69);
      }
 
      .btn-success {
@@ -22,7 +22,7 @@
         border-color: rgb(108, 186, 97);
         }
 
-        .btn-primary {
+        .btn-secondary {
             background-color: rgb(84, 140, 102);
             border-color: rgb(84, 140, 102) ;
         }
