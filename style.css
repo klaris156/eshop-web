@@ -1,14 +1,20 @@
 .myoffer3 {
     display: inline;
     padding-bottom: 30px;
+   
     }
     .myoffer4 {
      display: inline;
-     
     
      }
      .button-box {
       width:100%;
       text-align:center;
+      
      }
 
+     small {
+        color: rgb(255, 1, 1);
+     }
+
+  
