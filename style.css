@@ -30,3 +30,8 @@
         h6 {
             margin-bottom: 15px;
         }
+
+        .card-img {
+            height: 320px;
+            width: auto;
+        }
