@@ -71,68 +71,111 @@
   </div>
 
 
-<div class="container">
-    <div class="row">
-      <div class="d-flex flex-column flex-shrink-0 p-3 btn-secondary text-white" style="width: 230px;">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    
+<div class="container pt-4">
+  <div class="card">
+      <div class="row container">
+          <div class="col-md-7 cart">
+            <div class=" bg-light p-2">
+              <h5 class="mb-4">Filtrace</h5>
+              
+              <div class="mb-4">
+                  <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" id="price1">
+                      <label class="form-check-label" for="price1">Zimomilky</label>
+                  </div>
+                  <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" id="price2">
+                      <label class="form-check-label" for="price2">Teplomilky</label>
+                  </div>
+                  <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" id="price3">
+                      <label class="form-check-label" for="price3">Slunomilky</label>
+                  </div>
+                  <div class=" pt-3">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="price-range-wrapper p-4 bg-white rounded shadow-sm">
+                                <h4 class="mb-4">Cena</h4>
+                                <div class="price-display mb-3" id="priceDisplay">
+                                    Kč<span id="minPrice">0</span>- Kč<span id="maxPrice">1000</span>
+                                </div>
+                                <div class="range-slider position-relative">
+                                    <input type="range" class="form-range min-price" id="minPriceSlider" min="0" max="1000" value="0" step="10" aria-label="Minimum price range">
+                                    <input type="range" class="form-range max-price" id="maxPriceSlider" min="0" max="1000" value="1000" step="10" aria-label="Maximum price range">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const minSlider = document.getElementById('minPriceSlider');
+                    const maxSlider = document.getElementById('maxPriceSlider');
+                    const minPriceDisplay = document.getElementById('minPrice');
+                    const maxPriceDisplay = document.getElementById('maxPrice');
+            
+                    minSlider.addEventListener('input', function() {
+                        if(parseInt(minSlider.value) >= parseInt(maxSlider.value)){
+                            minSlider.value = parseInt(maxSlider.value) - 10;
+                        }
+                        minPriceDisplay.textContent = minSlider.value;
+                    });
+            
+                    maxSlider.addEventListener('input', function() {
+                        if(parseInt(maxSlider.value) <= parseInt(minSlider.value)){
+                            maxSlider.value = parseInt(minSlider.value) + 10;
+                        }
+                        maxPriceDisplay.textContent = maxSlider.value;
+                    });
+                </script>
+              </div>
+</div>
+          </div>
 
-          <span class="fs-4">FILTRACE</span>
-        </a>
 
-        <hr>
-        <ul class="nav nav- flex-column mb-auto">
 
-          <li class="pt-3">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="slunomilky">
-              <label class="form-check-label" for="slunomilky">
-                Slunomilky
-              </label>
-            </div>
-          </li>
-          <li class="pt-3">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="narocne">
-              <label class="form-check-label" for="narocne">
-                Náročné
-              </label>
-            </div>
-          </li>
-          <li class="pt-3">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="jednoduche">
-              <label class="form-check-label" for="jednoduche">
-                Jednoduché
-              </label>
-            </div>
-          </li>
-          <li class="pt-3">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="Zimomilky">
-              <label class="form-check-label" for="Zimomilky">
-                Zimomilky
-              </label>
-            </div>
-          </li>
+          <div class="col-md-4 col-lg-4 order-md-last pt-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="mb-0">Péče</h5></div>
+            
+          <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="brand1">
+              <label class="form-check-label" for="brand1">Náročné</label>
+          </div>
+          <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="brand2">
+              <label class="form-check-label" for="brand2">Jednoduché</label>
+          </div>
+          <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="brand3">
+              <label class="form-check-label" for="brand3">Umělé</label>
+          </div>
 
-          <li class="pt-3">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="Teplomilky">
-              <label class="form-check-label" for="Teplomilky">
-                Teplomilky
-              </label>
-            </div>
-          </li>
-
-          <label for="money" class="form-label pt-4">Cena</label
-          <input type="range" class="form-range" min="0" max="5" id="money">
-  
-          
-        </ul>
-
+        <div class="d-flex justify-content-between align-items-center mb-3 pt-3">
+          <h5 class="mb-0">Velikost</h5></div>
         
+      <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="brand1">
+          <label class="form-check-label" for="brand1">Malé</label>
       </div>
-      
+      <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="brand2">
+          <label class="form-check-label" for="brand2">Střední</label>
+      </div>
+      <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="brand3">
+          <label class="form-check-label" for="brand3">Velké</label>
+      </div>
+          
+</div>
+          </div>
+      </div>
+  </div>    
+           
+           
+     <div class="container">
+      <div class="row">
+
       <div class="col-md-6 col-xl-3 mt-4 text-center">
         <div class="card mb-4 box-shadow">
           <img class="card-img" src="images/monstera.png" alt="">
@@ -152,7 +195,8 @@
           </div>
         </div>
       </div>
-
+    
+    
       <div class="col-md-6 col-xl-3 mt-4 text-center">
         <div class="card mb-4 box-shadow">
           <img class="card-img" src="images/ziggy.webp" alt="">
@@ -173,6 +217,7 @@
           </div>
         </div>
       </div>
+     
 
       <div class="col-md-6 col-xl-3 mt-4 text-center">
         <div class="card mb-4 box-shadow">
@@ -194,13 +239,8 @@
           </div>
         </div>
       </div>
-    </div>
-
-
-    <div class="row">
-      <div class="d-flex flex-column flex-shrink-0 p-3 btn-secondary" style="width: 230px;">
-
-      </div>
+      
+     
       <div class="col-md-6 col-xl-3 mt-4 text-center">
         <div class="card mb-4 box-shadow">
           <img class="card-img" src="images/monty.webp" alt="">
@@ -262,13 +302,8 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="d-flex flex-column flex-shrink-0 p-3 btn-secondary" style="width: 230px;">
 
 
-      </div>
       <div class="col-md-6 col-xl-3 mt-4 text-center">
         <div class="card mb-4 box-shadow">
           <img class="card-img" src="images/pachiraaquatica.webp" alt="">
@@ -332,13 +367,8 @@
         </div>
       </div>
 
-    </div>
 
-
-    <div class="row">
-      <div class="d-flex flex-column flex-shrink-0 p-3 btn-secondary" style="width: 230px;">
-
-      </div>
+    
 
       <div class="col-md-6 col-xl-3 mt-4 text-center">
         <div class="card mb-4 box-shadow">
@@ -404,13 +434,6 @@
         </div>
       </div>
 
-    </div>
-
-
-    <div class="row">
-      <div class="d-flex flex-column flex-shrink-0 p-3 btn-secondary" style="width: 230px;">
-
-      </div>
       <div class="col-md-6 col-xl-3 mt-4 text-center">
         <div class="card mb-4 box-shadow">
           <img class="card-img" src="images/Ficus.webp" alt="">
@@ -475,8 +498,8 @@
           </div>
         </div>
       </div>
-    </div>
-</div>
+      
+      
 
 
 
